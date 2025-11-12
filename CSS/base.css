@@ -1,0 +1,60 @@
+/* Importando a fonte */
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Palanquin+Dark:wght@400;500;600;700&display=swap');
+
+/* Variáveis globais definidas em :root */
+:root {
+  --fonte-titulos: "Palanquin Dark", sans-serif;
+
+  --fonte-principal: "Darker Grotesque", sans-serif;
+  --peso-padrao: 600;
+  --peso-sub: 450;
+  --peso-negrito: 800;
+
+  /* Tamanhos de fonte com rem */
+  --tamanho-TXTtitulos:clamp(1.5rem, 4vw, 2rem); /*clamp(valorMínimo, valorIdeal, valorMáximo)*/
+  --tamanho-TXTsubtitulos: clamp(1.2rem, 3vw, 1.5rem);
+  --tamanho-TXTpadrao:clamp(1rem, 2vw, 1.2rem);
+
+   /* Cores */
+  --cor-texto: #3a3335;
+  --color01:#3a3335;
+  --color02:#602505;
+  --color03:#b94709;
+  --color04:#f15a24;
+  --color05:#f7931e;
+  --color06:#48736b;
+  --color07:#c6d8d3;
+  --color08:#f7f7f2;
+
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.ttTitulos{
+    font-family: var(--fonte-titulos);
+    font-weight: var(--peso-negrito);
+    font-size: var(--tamanho-TXTtitulos);
+    color: var(--color03);
+}
+
+.ttSubtitulos{
+    font-family: var(--fonte-principal);
+    font-weight: var(--peso-sub);
+    font-size: var(--tamanho-TXTsubtitulos);
+    color: var(--color03);
+}
+
+.ttPadrao{
+    font-family: var(--fonte-principal);
+    font-weight: var(--peso-padrao);
+    font-size: var(--tamanho-TXTpadrao);
+    color: var(--cor-texto);
+    text-align: justify;
+    ;
+
+}
