@@ -1,5 +1,5 @@
 header{
-    background-color: var(--color01;
+    background-color: var(--color01);
 }
 #top_header{
     margin: 0 auto;
@@ -178,5 +178,25 @@ header{
         color: var(--color05);
         border-left: 3px solid var(--color05);
         padding-left: 10px;
+    }
+}
+
+/* Expandir o header quando o menu mobile está ativo */
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+#mobileMenu.active {
+    min-height: auto;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        background-color: var(--color01);
+    }
+
+    header #top_header {
+        width: 100%;
     }
 }
