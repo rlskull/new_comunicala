@@ -182,16 +182,21 @@ header{
 }
 
 /* Expandir o header quando o menu mobile está ativo */
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+#mobileMenu.active {
+    min-height: auto;
+}
+
 @media screen and (max-width: 768px) {
     header {
-        width: 100%;
+        background-color: var(--color01);
     }
 
-    #top_header {
-        width: 100%;
-    }
-
-    #mobileMenu.active {
+    header #top_header {
         width: 100%;
     }
 }
