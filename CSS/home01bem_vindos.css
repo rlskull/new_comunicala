@@ -1,11 +1,11 @@
-#bem_vindos{
+#home01bem_vindos{
     width: 100%;
     background-color: var(--color01);
 }
 
 #containerBemVindos{
     width: 80vw;
-    height: 75vh;
+    height: 76vh;
     margin: 0 auto;
     background-color: var(--color01);
     background-image: url("../IMG/background_bem_vindo.png");
@@ -15,7 +15,6 @@
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
     gap: 5px;
-
 }
 
 #psImgBemVindo{
@@ -60,18 +59,49 @@
     transition: background-color 0.3s ease;
 }
 
-
-
-
-
-#bem_vindos h1.ttTitulos{
-    color: var(--color04);
+#btnBemVindos:hover{
+    background-color: var(--color03);
 }
 
-#bem_vindos h2.ttSubtitulos{
+#home01bem_vindos h1.ttTitulos{
     color: var(--color04);
+    margin-top: 2rem;
 }
 
-#bem_vindos p.ttPadrao {
+#home01bem_vindos h2.ttSubtitulos{
+    color: var(--color04);
+    font-weight: var(--peso-light);
+}
+
+#home01bem_vindos p.ttPadrao {
   color: var(--color08);
+  margin-top: 2rem;
+}
+
+
+/* Estilos responsivos para telas menores */
+
+@media screen and (max-width: 768px){
+    #containerBemVindos{
+        width: 90vw;
+        height: 1000px;
+        grid-template-columns: repeat(6, 1fr);
+        background-image: url("../IMG/background_bem_vindo_mobile.png");
+        background-position: center;
+    }
+
+    #psImgBemVindo{
+        grid-column: 1 / span 7;
+        grid-row: 6 / span 7;
+    }
+
+    #txtbemVindos{
+    grid-column: 2 / span 4;
+    grid-row: 1 / span 5;
+    }
+
+#btnBemVindos{
+    grid-column: 5 / span 3;
+    grid-row: 6 / span 2;
+    }
 }
