@@ -1,0 +1,77 @@
+#bem_vindos{
+    width: 100%;
+    background-color: var(--color01);
+}
+
+#containerBemVindos{
+    width: 80vw;
+    height: 75vh;
+    margin: 0 auto;
+    background-color: var(--color01);
+    background-image: url("../IMG/background_bem_vindo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    gap: 5px;
+
+}
+
+#psImgBemVindo{
+    grid-column: 1 / span 7;
+    grid-row: 3 / span 7;
+    background-image: url("../IMG/img01BemVindos.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: center;
+}
+
+#txtbemVindos{
+    grid-column: 7 / span 5;
+    grid-row: 1 / span 5;
+    color: var(--color08);
+    font-family: var(--fonte-principal);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 20px;
+    /* margin-right: 20px; */
+}
+
+#btnBemVindos{
+    grid-column: 9 / span 3;
+    grid-row: 6 / span 2;
+    background-color: var(--color04);
+    color: var(--color08);
+    font-family: var(--fonte-principal);
+    font-weight: var(--peso-bold);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin-left: auto;
+    margin-top: 1.5rem;;
+    font-size: 16px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+
+
+
+
+#bem_vindos h1.ttTitulos{
+    color: var(--color04);
+}
+
+#bem_vindos h2.ttSubtitulos{
+    color: var(--color04);
+}
+
+#bem_vindos p.ttPadrao {
+  color: var(--color08);
+}

@@ -37,6 +37,8 @@ header{
     margin-right: 20px;
     color: var(--color04);
     order: 1;
+    font-family: var(--fonte-principal);
+    font-weight: var(--peso-light);
 }
 
 #nav_list{
@@ -97,7 +99,7 @@ header{
     position: absolute;
     top: 100%;
     right: 0;
-    background-color: var(--color01);
+    background-color: #3a3335d8;
     z-index: 999;
     min-width: 200px;
 }

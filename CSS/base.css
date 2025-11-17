@@ -7,14 +7,14 @@
   --fonte-titulos: "Palanquin Dark", sans-serif;
 
   --fonte-principal: "Darker Grotesque", sans-serif;
-  --peso-padrao: 500;
+  --peso-padrao: 400;
   --peso-sub: 450;
   --peso-light: 300;
   --peso-negrito: 800;
 
   /* Tamanhos de fonte com rem */
   --tamanho-TXTtitulos:clamp(1.3rem, 4vw, 1.6rem); /*clamp(valorMínimo, valorIdeal, valorMáximo)*/
-  --tamanho-TXTsubtitulos: clamp(1.2rem, 3vw, 1.5rem);
+  --tamanho-TXTsubtitulos: clamp(1.2rem, 3vw, 1.4rem);
   --tamanho-TXTpadrao:clamp(1rem, 2vw, 1.2rem);
 
    /* Cores */
@@ -44,7 +44,6 @@
     font-family: var(--fonte-titulos);
     font-weight: var(--peso-negrito);
     font-size: var(--tamanho-TXTtitulos);
-    color: var(--color03);
     margin-bottom: 0.2rem; /* diminui o espaço abaixo do título */
 }
 
@@ -52,7 +51,6 @@
     font-family: var(--fonte-principal);
     font-weight: var(--peso-sub);
     font-size: var(--tamanho-TXTsubtitulos);
-    color: var(--color03);
     margin-top: 0;
 }
 
@@ -60,8 +58,7 @@
     font-family: var(--fonte-principal);
     font-weight: var(--peso-padrao);
     font-size: var(--tamanho-TXTpadrao);
-    color: var(--cor-texto);
     text-align: justify;
-    margin-top: 1rem;
+    margin-top: 1.2rem;
 
 }

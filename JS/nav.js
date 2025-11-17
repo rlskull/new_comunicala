@@ -42,8 +42,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Gerenciar abertura/fechamento do menu mobile
     if (mobileBtn && mobileMenu) {
+        const header = document.querySelector('header');
         mobileBtn.addEventListener('click', function() {
             mobileMenu.classList.toggle('active');
+            header.classList.toggle('menu-active'); // Adiciona/remove classe no header
             // Toggle do ícone (hambúrguer para X)
             const icon = mobileBtn.querySelector('i');
             if (icon) {
