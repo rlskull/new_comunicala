@@ -36,9 +36,8 @@
   box-sizing: border-box;
 }
 
-.bloco-titulo {
+/* .bloco-titulo {
   line-height: 0.7;        /* diminui o espaçamento entre linhas */
-}
 
 .ttTitulos{
     font-family: var(--fonte-titulos);
@@ -61,4 +60,10 @@
     text-align: justify;
     margin-top: 1.2rem;
 
+}
+
+.titulosAgrupados{
+    display: flex;
+    flex-direction: column;
+    line-height: 1;  
 }

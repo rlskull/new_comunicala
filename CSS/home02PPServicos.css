@@ -1,7 +1,4 @@
-#home02PPServicos{
-    width: 100%;
-    /* background-color: var(--color06); */
-}
+
 
 #containerhome02PPServicos{
     width: 80vw;
@@ -24,24 +21,17 @@
     /* margin-top: 2rem; */
 } 
 
-.titulosAgrupados{
-    display: flex;
-    flex-direction: column;
-    line-height: 1;  
-}
+
 
 #simbolo01{
     width: 100px;
     margin-right: 1rem;
 }
 
-#imgTituloPPservicos h2.ttSubtitulos{
-    color: var(--color05);
-    /* font-weight: var(--peso-subtitulo); */
-}
+#imgTituloPPservicos h2.ttSubtitulos,
 #imgTituloPPservicos h1.ttTitulos{
     color: var(--color05);
-    /* font-weight: var(--peso-titulo); */
+    /* font-weight: var(--peso-subtitulo); */
 }
 
 
