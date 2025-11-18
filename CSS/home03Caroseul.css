@@ -1,0 +1,51 @@
+#home03Caroseul{
+    width: 100%;
+    height: 20vh;
+    background-color: var(--color08);
+}
+
+#infparceiros{
+    width: 80vw;
+    height: 5vh;
+    margin: 0 auto;
+}
+
+#infparceiros h1.ttTitulos{
+    color: var(--color02);
+    font-size:0.9rem;
+    padding: 15px 0 0 90px;
+}
+
+#containerCaroseul{
+    width: 100%;
+    height: 15vh;
+}
+
+
+/* Estilos para o carrossel de parceiros */
+#containerCaroseul {
+    width: 100%;
+    height: 15vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.carrossel-track {
+    display: flex;
+    gap: 40px;
+    animation: deslizar 25s linear infinite;
+}
+
+.carrossel-track img {
+    height: 50px; /* Ajuste como quiser */
+    object-fit: contain;
+    filter: grayscale(20%); /* opcional, deixar mais uniforme */
+    opacity: 0.9;
+}
+
+/* Animação */
+@keyframes deslizar {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } 
+}
