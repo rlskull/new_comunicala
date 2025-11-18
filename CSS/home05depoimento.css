@@ -1,0 +1,49 @@
+#home05depoimento {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+
+    /* PARALLAX REAL */
+    background-image: url("../IMG/fotoparalaxes.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Camada escura por cima */
+#home05depoimento::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:#3a3335d4;
+}
+
+/* Conteúdo */
+#home05depoimento .conteudo {
+    position: relative;
+    z-index: 2;
+    max-width: 500px;
+    padding: 20px;
+    color: #fff;
+}
+
+
+/* Texto */
+#home05depoimento p.ttPadrao {
+    font-size: 22px;
+    /* line-height: 1.6; */
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Autor */
+#home05depoimento p.ttTitulos{
+    text-align: right;
+    color: var(--color05);
+    margin-top: 15px;
+}

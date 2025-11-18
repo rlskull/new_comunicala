@@ -38,7 +38,7 @@
 }
 
 .carrossel-track img {
-    height: 50px; /* Ajuste como quiser */
+    height: 80px; /* Ajuste como quiser */
     object-fit: contain;
     filter: grayscale(20%); /* opcional, deixar mais uniforme */
     opacity: 0.9;
