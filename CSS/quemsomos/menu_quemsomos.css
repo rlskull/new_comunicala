@@ -1,0 +1,195 @@
+header{
+    background-color: var(--color02);
+}
+#top_header{
+    margin: 0 auto;
+    background-color: var(--color02);
+    width: 80vw;
+}
+
+#logo_header img{
+    width: 150px;
+    margin: 10px 0;
+    margin-top: 15px;
+}
+
+#navbar{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+#menu{
+    background-color: var(--color02);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#social_media{
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+    list-style: none;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    color: var(--color05);
+    order: 1;
+    font-family: var(--fonte-principal);
+    font-weight: var(--peso-light);
+}
+
+#nav_list{
+    display: flex;
+    justify-content: end;
+    list-style: none;
+    gap: 10px;
+    margin-right: 20px;
+    color: var(--color08);
+    order: 2;
+}
+
+#social_media li a{
+    color: var(--color05);
+    text-decoration: none;
+    transition: transform .2s ease, color .2s ease;
+}   
+#social_media li a:hover{
+    transform: scale(1.2);
+    color: var(--color07);
+
+}   
+
+#nav_list .list a{
+    font-family: var(--fonte-principal);
+    text-decoration: none;
+    color: var(--color08);
+    font-weight: var(--peso-light);
+    padding-bottom: 5px;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+/* Link ativo - com barra e cor diferente */
+#nav_list .list.active a,
+#nav_list .list a:active{
+    color: var(--color05);
+    border-bottom: 3px solid var(--color05);
+    font-weight: var(--peso-padrao);
+}
+
+/* Hover - feedback visual ao passar o mouse */
+#nav_list .list a:hover{
+    color: var(--color05);
+    border-bottom: 3px solid var(--color05);
+}
+
+/* Estilos para os separadores (|) */
+#nav_list .separator{
+    display: flex;
+    align-items: center;
+    color: var(--color08);
+    font-weight: var(--peso-light);
+}
+
+/* Botão mobile escondido por padrão */
+#mobileBtn{ 
+    display: none;
+}
+
+/* Menu mobile escondido por padrão */
+#mobileMenu{
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #602505d8;
+    z-index: 999;
+    min-width: 200px;
+}
+
+
+/* Responsividade */
+@media screen and (max-width: 768px){
+
+
+    #nav_list{
+        display: none;
+    }
+
+    #menu{
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0;
+    }
+
+    #social_media{
+        margin-bottom: 0;
+        margin-right: 0;
+        gap: 10px;
+        order: 1;
+        justify-content: flex-between;
+        padding: 10px 15px;
+        flex: 1;
+    }
+
+    /* Mostra botão mobile alinhado à direita */
+    #mobileBtn{
+        display: block;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--color08);
+        margin: 0;
+        padding: 10px 15px;
+        order: 2;
+    }
+
+    /* Mostra o menu mobile quando tem classe .active */
+    #mobileMenu.active{
+        display: block;
+    }
+
+    /* Estilizar a lista do menu mobile */
+    #mobileNavList{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        list-style: none;
+        gap: 0;
+        margin: 0;
+        padding: 15px 20px;
+    }
+
+    /* Estilos dos links do menu mobile */
+    #mobileNavList .list a{
+        font-family: var(--fonte-principal);
+        text-decoration: none;
+        color: var(--color08);
+        font-weight: var(--peso-light);
+        padding: 10px 0;
+        display: block;
+        border-left: 3px solid transparent;
+        transition: all 0.3s ease;
+    }
+
+    /* Link ativo do menu mobile - com barra à esquerda e cor diferente */
+    #mobileNavList .list.active a{
+        color: var(--color05);
+        border-right: 3px solid var(--color05);
+        font-weight: var(--peso-padrao);
+        padding-right: 10px;
+    }
+
+    /* Hover do menu mobile */
+    #mobileNavList .list a:hover{
+        color: var(--color05);
+        border-right: 3px solid var(--color05);
+        padding-right: 10px;
+    }
+}
+
