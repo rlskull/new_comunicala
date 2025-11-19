@@ -67,3 +67,10 @@
     flex-direction: column;
     line-height: 1;  
 }
+
+
+/* deixando o fundo branco */
+.fundoBranco{
+  width: 100%;
+  background-color: white;
+}

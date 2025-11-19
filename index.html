@@ -18,7 +18,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
-<body>
+<body style="background-color: var(--color01);">
     <header>
         <div id="top_header">
         <nav id="navbar">
@@ -117,8 +117,10 @@
             </div>
         </section>
 
-        <!-- Seção de home02PPServicos -->
-        <section id="containerhome02PPServicos">
+        <!-- Section de home02PPServicos -->
+        <section class="fundoBranco">
+        
+        <div id="containerhome02PPServicos">
 
                 <!--título principais serviços-->
                 <div id="imgTituloPPservicos">
@@ -162,6 +164,7 @@
                     </div>
                 </div>
             </div>
+        </div>
         </section>
 
         <!--Caroseul parceiros-->
@@ -196,8 +199,10 @@
             </div>           
         </section>
 
-        <!--pq nos escolher-->
-        <section id="containerPPEscolher">
+        <!-- Section pq nos escolher-->
+        <section class="fundoBranco">
+        
+        <div id="containerPPEscolher">
             <div id="psImgPPEscolher">
                 <img id="imgLogo04" class="fade-in" src="./IMG/logo_04.png" alt="logocompleto">
             </div>
@@ -212,6 +217,7 @@
                     facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi, Lorem ipsum dolor sit amet.
                 </p>
                 <button id="btnPPEscolher">SAIBA MAIS</button>
+            </div>
             </div>
         </section>
 
@@ -228,14 +234,15 @@
 </section>
   
     <!--Section o poder da inclusão na sua empresa-->
-        <section id="containerinclusao">
+        <section class="fundoBranco">
+        <div id="containerinclusao">
             <div id="psImgInclusao">
                 <img id="imgPadrao02" class="fade-in" src="./IMG/imgPadrao02.png" alt="logocompleto">
             </div>
             <div id="containerTTInclusao">
                 <div class="titulosAgrupados">
-                <h2 class="ttSubtitulos">POR QUE NOS</h2>
-                <h1 class="ttTitulos">ESCOLHER</h1>
+                <h2 class="ttSubtitulos">PODER DA INCLUSÃO</h2>
+                <h1 class="ttTitulos">NA SUA EMPRESA</h1>
                 </div>
                 <p class="ttPadrao">
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. <br>
@@ -243,15 +250,75 @@
                     facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi, Lorem ipsum dolor sit amet.
                 </p>
             </div>
+        </div>
         </section>
     </main>
+
     <footer>
+        <div id="fundoInfo">
+            <div id="containerInfo">
+                <div id="divFooterGroup">
+                    <div class="divFooter">
+                        <img id="logoFooter" src="./IMG/logo_01.png" alt="Logotipo circular do projeto “ComunicAla – Vozes entre os Povos”. O logo apresenta silhuetas de perfis humanos em tons de laranja, vermelho e amarelo, com padrões gráficos inspirados em referências culturais. As silhuetas se sobrepõem dentro de um círculo branco, envolto por arcos coloridos em laranja, amarelo e verde-claro. O nome “Comunicala” aparece em destaque no centro, inclinado, com tipografia espessa em marrom, e abaixo está o texto “Vozes entre os Povos”.">
+                        <p class="ttPadrao">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                        </p>
+                    </div>
+                    
+                    <div class="divFooter">
+                        <div class="umFooter">
+                            <h1 class="ttTitulos"> MAPA DO SITE</h1></div>
+                        <div class="doisFooter titulosAgrupados">
+                            <ul id="mapaSite">
+                                <li class="itensMapaSite ttPadrao active"><a href="#Inicio">INÍCIO</a></li>
+                                <li class="itensMapaSite ttPadrao"><a href="#quemsomos">QUEM SOMOS</a></li>
+                                <li class="itensMapaSite ttPadrao"><a href="#servicos">SERVIÇOS</a></li>
+                                <li class="itensMapaSite ttPadrao"><a href="#parceiros">PARCEIROS</a></li>
+                                <li class="itensMapaSite ttPadrao"><a href="#contatos">CONTATOS</a></li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+
+                    <div class="divFooter">
+                        <div class="umFooter"><h1 class="ttTitulos">CONTATOS</h1></div>
+                            <div class="doisFooter">
+                                    <div id="contatoFooter">
+                                    <hi class="ttPadrao">
+                                        (11) 99999-9999
+                                    </hi>
+                                    <div id="socialFooter">
+                                        <a href="#what">
+                                            <i class="fa-brands fa-whatsapp"></i>
+                                        </a>
+                                        <a href="#what">
+                                            <i class="fa-brands fa-linkedin-in"></i>
+                                        </a>
+                                        <a href="#what">
+                                            <i class="fa-brands fa-instagram"></i>
+                                        </a>
+                                        </div>
+                                    </div>
+                            </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+            <div id="desenvolvedor">
+            <p class="ttSubtitulos titulosAgrupados">
+                STUDIO RLSKULL<br>2025 - TODOS OS DIREITOS RESERVADOS ©  
+            </p>
+
+        </div>
+                        
 
     </footer>
-
      
     <script src="./JS/nav.js"></script>
     <script src="./JS/animation.js"></script>
     <script src="./JS/parallax.js"></script>
+
+
 </body>
 </html>
