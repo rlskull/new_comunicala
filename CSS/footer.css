@@ -120,6 +120,11 @@ footer{
 #socialFooter i.fa-brands{
     color: var(--color05);
     font-size: 1.5rem;
+    transition: transform .2s ease, color .2s ease;
+}
+#socialFooter i.fa-brands:hover{
+     transform: scale(1.2);
+    color: var(--color08);
 }
 
 #desenvolvedor{
