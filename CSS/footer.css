@@ -142,3 +142,47 @@ footer{
     padding-top: 0.9rem;
 }
 
+/*responsividade*/
+@media screen and (max-width:768px){
+
+
+    #containerInfo{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    #divFooterGroup{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .divFooter{
+        width: 100%;
+        text-align: center;
+    }
+
+    .umFooter h1.ttTitulos{
+        height: auto;
+        padding: 1rem 0;
+    }
+
+    .doisFooter{
+        height: auto;
+        padding-bottom: 2rem;
+    }
+
+    #logoFooter{
+        padding-top: 1rem;
+    }
+
+    .divFooter p.ttPadrao{
+        padding: 0 20px 1.5rem 20px;
+    }
+
+    #socialFooter{
+        padding-bottom: 1rem;
+    }
+}
+
