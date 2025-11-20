@@ -76,6 +76,20 @@
 }
 
 
+/*efeito pb para colorido*/
+
+.img-bw {
+    filter: grayscale(100%);
+    transition: filter 0.4s ease-in-out;
+}
+
+.img-colorido {
+    filter: grayscale(0%) !important;
+}
+
+
+
+
 /*caixa formatação de texto*/
 
 .caixaTXT{

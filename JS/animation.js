@@ -13,3 +13,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     elements.forEach(el => observer.observe(el));
 });
+
+
+/* efeito colorido */
+
+    const imagens = document.querySelectorAll(".imagemPersistente");
+
+    imagens.forEach(img => {
+        img.addEventListener("mouseenter", () => {
+            img.classList.add("img-colorido");
+        });
+    });
