@@ -49,3 +49,11 @@
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); } 
 }
+
+@media screen and (max-width:768px){
+    
+#infparceiros h1.ttTitulos{
+    font-size:0.6rem;
+    padding: 15px 0 0 10px;
+}
+}

@@ -74,3 +74,36 @@
   width: 100%;
   background-color: white;
 }
+
+
+/*caixa formatação de texto*/
+
+.caixaTXT{
+    grid-column: 7 / span 5;
+    grid-row: 2 / span 5;
+    color: var(--color08);
+    font-family: var(--fonte-principal);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 20px;
+    /* margin-right: 20px; */
+}
+
+/*caixa responsiva*/
+@media screen and (max-width: 768px){
+
+     .caixaTXT{
+    grid-column: 1 / span 6;
+    grid-row: 1 / span 5;
+    padding-left: 35px;
+    padding-right: 30px;
+    }
+
+    /* mais o botão */
+    #btnBemVindos{
+    grid-column: 5 / span 3;
+    grid-row: 6 / span 2;
+    }
+}

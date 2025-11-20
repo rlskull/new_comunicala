@@ -27,20 +27,14 @@
     margin: 0;
 }
 
-#containerTTInclusao {
-    grid-column: 7 / span 5;
+#containerinclusao .caixaTXT {
     grid-row: 2 / span 8;
     color: var(--color01);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding-left: 20px;
 }
 
 
-#containerTTInclusao h1.ttTitulos,
-#containerTTInclusao h2.ttSubtitulos{
+.caixaTXT h1.ttTitulos,
+.caixaTXT h2.ttSubtitulos{
     color: var(--color04);
 }
 
@@ -66,11 +60,8 @@
         width: 500px;
     }
 
-    #containerTTInclusao {
-        grid-column: 2 / span 4;
-        grid-row: 5 / span 4;
+    #containerinclusao .caixaTXT {
         margin-top: 3rem;
-        padding-left: 0;
         align-items: center;
         text-align: center;
     }

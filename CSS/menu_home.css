@@ -113,7 +113,10 @@ header{
 /* Responsividade */
 @media screen and (max-width: 768px){
 
-
+    #logo_header img{
+        width: 90px;
+    }
+    
     #nav_list{
         display: none;
     }
@@ -124,6 +127,10 @@ header{
         justify-content: space-between;
         align-items: center;
         gap: 0;
+    }
+
+    #tel{
+        display: none;
     }
 
     #social_media{

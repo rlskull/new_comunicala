@@ -21,15 +21,9 @@
     width: 550px;
 }
 
-#containerTTPP {
-    grid-column: 7 / span 5;
+#containerPPEscolher .caixaTXT {
     grid-row: 2 / span 8;
     color: var(--color01);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding-left: 20px;
 }
 
 #btnPPEscolher {
@@ -55,8 +49,8 @@
     background-color: var(--color04);
 }
 
-#containerTTPP h1.ttTitulos,
-#containerTTPP h2.ttSubtitulos{
+.caixaTXT h1.ttTitulos,
+.caixaTXT h2.ttSubtitulos{
     color: var(--color04);
 }
 
@@ -78,10 +72,8 @@
         width: 300px;
     }
 
-    #containerTTPP{
-        grid-column: 2 / span 4;
+    #containerPPEscolher .caixaTXT{
         grid-row: 3 / span 5;
-        padding-left: 0;
         align-items: center;
         text-align: center;
     }
