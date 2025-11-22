@@ -15,7 +15,7 @@
   /* Tamanhos de fonte com rem */
   --tamanho-TXTtitulos:clamp(1.3rem, 4vw, 1.6rem); /*clamp(valorMínimo, valorIdeal, valorMáximo)*/
   --tamanho-TXTsubtitulos: clamp(1.2rem, 3vw, 1.4rem);
-  --tamanho-TXTpadrao:clamp(1rem, 2vw, 1.2rem);
+  --tamanho-TXTpadrao:clamp(1.3rem, 2vw, 1.3rem);
 
    /* Cores */
   --cor-texto: #3a3335;

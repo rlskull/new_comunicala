@@ -3,7 +3,7 @@
     background-color: var(--color01);
 }
 
-#containerBemVindos{
+#containerBV01{
     width: 80vw;
     height: 77vh;
     margin: 0 auto;
@@ -18,7 +18,7 @@
     gap: 5px;
 }
 
-#psImgBemVindo{
+#imgBV01{
     grid-column: 1 / span 7;
     grid-row: 3 / span 7; 
     display: flex;
@@ -65,17 +65,17 @@
     background-color: var(--color03);
 }
 
-#home01bem_vindos h1.ttTitulos{
+#containerBV01 h1.ttTitulos{
     color: var(--color04);
     margin-top: 2rem;
 }
 
-#home01bem_vindos h2.ttSubtitulos{
+#containerBV01 h2.ttSubtitulos{
     color: var(--color04);
     font-weight: var(--peso-light);
 }
 
-#home01bem_vindos p.ttPadrao {
+#containerBV01 p.ttPadrao {
   color: var(--color08);
   margin-top: 2rem;
 }
@@ -84,7 +84,7 @@
 /* Estilos responsivos para telas menores */
 
 @media screen and (max-width: 768px){
-    #containerBemVindos{
+    #containerBV01{
         width: 90vw;
         height: 800px;
         grid-template-columns: repeat(6, 1fr);
@@ -92,7 +92,7 @@
         background-position: center;
     }
 
-    #psImgBemVindo{
+    #imgBV01{
         grid-column: 1 / span 7;
         grid-row: 5 / span 6;
         justify-content: center;

@@ -1,5 +1,5 @@
 
-#containerhome02PPServicos{
+#containerBV02{
     width: 80vw;
     height: 100vh;
     margin: 0 auto;
@@ -10,7 +10,7 @@
     gap: 5px;
 }
 
-#imgTituloPPservicos{
+#imgBV02{
     grid-column: 2 / span 2;
     grid-row: 2 / span 1;
     display: flex;
@@ -27,8 +27,8 @@
     margin-right: 1rem;
 }
 
-#imgTituloPPservicos h2.ttSubtitulos,
-#imgTituloPPservicos h1.ttTitulos{
+#imgBV02 h2.ttSubtitulos,
+#imgBV02 h1.ttTitulos{
     color: var(--color05);
     /* font-weight: var(--peso-subtitulo); */
 }
@@ -78,7 +78,7 @@
 /*RESPONSIVO*/
 
 @media screen and (max-width: 768px){
-    #containerhome02PPServicos{
+    #containerBV02{
         width: 90vw;
         height: auto;
         min-height: 100vh;
@@ -86,7 +86,7 @@
         grid-template-rows: auto;
     }
 
-    #imgTituloPPservicos{
+    #imgBV02{
         grid-column: 1 / span 6;
         grid-row: 2 / span 3;
         justify-content: center;
