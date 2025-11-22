@@ -55,7 +55,7 @@
 @media screen and (max-width: 768px){
     #containerQS02{
         width: 90vw;
-        height: 800px;
+        height: auto;
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: auto;
     }

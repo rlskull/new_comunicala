@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./CSS/menu.css">
     <link rel="stylesheet" href="./CSS/qs01inicio.css">
     <link rel="stylesheet" href="./CSS/qs02inicio.css">
+    <link rel="stylesheet" href="./CSS/qs03equipe.css">
     <link rel="stylesheet" href="./CSS/footer.css">
 
 
@@ -117,7 +118,7 @@
         <section>
             <div id="containerQS02">
                 <div id="psImgQS02">
-                    <img id="imgQS02" class="fade-in img-bw imagemPersistente" src="./IMG/imgPadrao03.png" alt="logocompleto">
+                    <img id="imgQS02" class="fade-in" src="./IMG/imgPadrao03.png" alt="logocompleto">
                 </div>
                 <div class="caixaTXT">
                     <div id="containerQSMissao">
@@ -156,11 +157,157 @@
             </div>
         </section>
 
+        <!--Section03 Equipe-->
+        <section class="fundoBranco">
+            <div id="containerQS03">
+                <!--título principais serviços-->
+                <div id="imgTituloQS">
+                    <img id="simbolo01" src="../new_comunicala/IMG/imgppservicos.png" alt="texto">
+                       <div class="titulosAgrupados">
+                            <h2 class="ttSubtitulos">NOSSA</h2>
+                            <h1 class="ttTitulos">EQUIPE</h1>
+                        </div>
+                </div>
+
+                <!--Container para equipe-->
+                <div id="equipeQS">
+                            <div class="equipe" 
+         data-img="./IMG/equipe.png" 
+         data-titulo="ELISANGELA DE JESUS"
+         data-texto="É uma mulher preta, intérprete de Língua Brasileira de Sinais atuante na cultura surda e na área de tradução/interpretação há 10 anos. Especialista em Tradução e Interpretação de Libras/Português pelo Instituto Singularidades. Mestranda em Linguística Aplicada e Estudos da Língua - PUC.">
+        <img class="fade-in" src="./IMG/equipe.png">
+        <div class="overlay ttTitulos">SAIBA +</div>
+    </div>
+
+    <div class="equipe" 
+         data-img="./IMG/equipe2.png"
+         data-titulo="Lorem Ipsum"
+         data-texto="Texto da pessoa 2">
+        <img class="ftIMG fade-in img-bw imagemPersistente" src="./IMG/equipe.png">
+        <div class="overlay ttTitulos">SAIBA +</div>
+    </div>
+
+    <div class="equipe" 
+         data-img="./IMG/equipe3.png" 
+         data-titulo="Lorem Ipsum"
+         data-texto="Texto da pessoa 3">
+        <img class="ftIMG fade-in img-bw imagemPersistente" src="./IMG/equipe.png">
+        <div class="overlay ttTitulos">SAIBA +</div>
+    </div>
+
+    <div class="equipe" 
+         data-img="./IMG/equipe4.png"
+         data-titulo="Lorem Ipsum"
+         data-texto="Texto da pessoa 4">
+        <img class="ftIMG fade-in img-bw imagemPersistente" src="./IMG/equipe.png">
+        <div class="overlay ttTitulos">SAIBA +</div>
+    </div>
+
+    <div class="equipe" 
+         data-img="./IMG/equipe5.png"
+         data-titulo="Lorem Ipsum"
+         data-texto="Texto da pessoa 5">
+        <img class="ftIMG fade-in img-bw imagemPersistente" src="./IMG/equipe.png">
+        <div class="overlay ttTitulos">SAIBA +</div>
+    </div>
+
+    <div class="equipe" 
+         data-img="./IMG/equipe6.png"
+         data-titulo="Lorem Ipsum"
+         data-texto="Texto da pessoa 6">
+        <img class="ftIMG fade-in img-bw imagemPersistente" src="./IMG/equipe.png">
+        <div class="overlay ttTitulos">SAIBA +</div>
+    </div>
+
+
+            </div>
+
+<!-- MODAL -->
+<div id="modalEquipe" class="modal">
+    <div class="modal-wrapper">
+
+        <div class="modal-left">
+            <img id="modalImg" src="">
+        </div>
+
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modalTitulo" class="ttTitulos"></h2>
+            <div id="modalConteudo" class="ttPadrao"></div>
+        </div>
+
+    </div>
+</div>
+
+
+        </section>
 
     </main>
 
+    <footer>
+        <div id="fundoInfo">
+            <div id="containerInfo">
+                <div id="divFooterGroup">
+                    <div class="divFooter">
+                        <img id="logoFooter" src="./IMG/logo_01.png" alt="Logotipo circular do projeto “ComunicAla – Vozes entre os Povos”. O logo apresenta silhuetas de perfis humanos em tons de laranja, vermelho e amarelo, com padrões gráficos inspirados em referências culturais. As silhuetas se sobrepõem dentro de um círculo branco, envolto por arcos coloridos em laranja, amarelo e verde-claro. O nome “Comunicala” aparece em destaque no centro, inclinado, com tipografia espessa em marrom, e abaixo está o texto “Vozes entre os Povos”.">
+                        <p class="ttPadrao">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                        </p>
+                    </div>
+                    
+                    <div class="divFooter">
+                        <div class="umFooter">
+                            <h1 class="ttTitulos"> MAPA DO SITE</h1></div>
+                        <div class="doisFooter titulosAgrupados">
+                            <ul id="mapaSite">
+                                <li class="itensMapaSite ttPadrao active"><a class="js-link" data-var="--link-inicio">INÍCIO</a></li>
+                                <li class="itensMapaSite ttPadrao"><a class="js-link" data-var="--link-quemsomos">QUEM SOMOS</a></li>
+                                <li class="itensMapaSite ttPadrao"><a class="js-link" data-var="--link-servicos">SERVIÇOS</a></li>
+                                <li class="itensMapaSite ttPadrao"><a class="js-link" data-var="--link-parceiros">PARCEIROS</a></li>
+                                <li class="itensMapaSite ttPadrao"><a class="js-link" data-var="--link-contatos">CONTATOS</a></li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+
+                    <div class="divFooter">
+                        <div class="umFooter"><h1 class="ttTitulos">CONTATOS</h1></div>
+                            <div class="doisFooter">
+                                    <div id="contatoFooter">
+                                    <hi class="ttPadrao">
+                                        (11) 99999-9999
+                                    </hi>
+                                    <div id="socialFooter">
+                                        <a class="js-link" data-var="--link-whatsapp">
+                                            <i class="fa-brands fa-whatsapp"></i>
+                                        </a>
+                                        <a class="js-link" data-var="--link-linkedin">
+                                            <i class="fa-brands fa-linkedin-in"></i>
+                                        </a>
+                                        <a class="js-link" data-var="--link-instagram">
+                                            <i class="fa-brands fa-instagram"></i>
+                                        </a>
+                                        </div>
+                                    </div>
+                            </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+            <div id="desenvolvedor">
+            <p class="ttSubtitulos titulosAgrupados">
+                STUDIO RLSKULL<br>2025 - TODOS OS DIREITOS RESERVADOS ©  
+            </p>
+
+        </div>
+                        
+
+    </footer>
+
     <script src="./JS/nav.js"></script>
     <script src="./JS/link.js"></script>
+    <script src="./JS/modal.js"></script>
     <script src="./JS/animation.js"></script>
 
 </body>

@@ -6,6 +6,7 @@ footer{
 #fundoInfo{
     width: 100%;
     /* height: 40vh; */
+    background-color: var(--color01);
     background-image: url(../IMG/fundoQuadriculado.png);
     background-repeat: repeat;
     background-size: 600px;
@@ -24,6 +25,7 @@ footer{
 }
 
 #divFooterGroup{
+    /* background-color: blue; */
     grid-column: 1 / span 12;
     grid-row: auto;
     display: flex;
