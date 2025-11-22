@@ -28,6 +28,19 @@
   --color07:#c6d8d3;
   --color08:#f7f7f2;
 
+/*variaveis para os links*/
+/* LINKS DO MENU*/
+--link-inicio:"index.html";
+--link-quemsomos:"quemsomos.html";
+--link-servicos:"servicos.html";
+--link-parceiros:"parceiros.html";
+--link-contatos:"contatos.html";
+
+/*LINKS REDES SOCIAIS*/
+--link-whatsapp:"";
+--link-instagram:"";
+--link-linkedin:"https://www.linkedin.com/in/comunicala-vozes-entre-os-povos-5a1a68219/?originalSubdomain=br";
+
 }
 
 *{
@@ -76,7 +89,7 @@
 }
 
 
-/*efeito pb para colorido*/
+/*efeito preto e branco para colorido*/
 
 .img-bw {
     filter: grayscale(100%);
@@ -121,3 +134,5 @@
     grid-row: 6 / span 2;
     }
 }
+
+
