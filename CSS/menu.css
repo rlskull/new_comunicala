@@ -109,10 +109,48 @@ header{
     min-width: 200px;
 }
 
-/*alterando a cor do quem somos*/
+
+
+/*personalizando as cores dos demais menus: quem somos/ serviços/ parceiros/ contatos*/
 #quemsomos div#mobileMenu{
     background-color: #602505d8;
 }
+
+#servicos div#mobileMenu{
+    background-color: #b94709d8;
+}
+
+#servicos #nav_list{
+    color: var(--color01) !important;
+
+}
+
+#servicos #social_media{
+    color: var(--color01);
+}
+
+#servicos #social_media li a{
+    color: var(--color01);
+} */
+
+/* Link ativo - com barra e cor diferente */
+/* #servicos #nav_list .list.active a,
+#servicos #nav_list .list a:active{
+    color: var(--color02);
+    border-bottom: 3px solid var(--color02);
+} */
+
+/* Hover - feedback visual ao passar o mouse */
+/* #servicos #nav_list .list a:hover{
+    color: var(--color02);
+    border-bottom: 3px solid var(--color02);
+} */
+
+
+
+
+
+
 
 
 /* Responsividade */
