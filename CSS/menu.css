@@ -115,7 +115,7 @@
 
     /* servicos */
         #servicos div#mobileMenu{
-            background-color: var(--color09);
+            background-color:#9c3c08d8;
         }
 
         #servicos #nav_list{
@@ -124,11 +124,11 @@
         }
 
         #servicos #social_media{
-            color: var(--color01);
+            color: var(--color05);
         }
 
         #servicos #social_media li a{
-            color: var(--color01);
+            color: var(--color05);
             text-decoration: none;
             transition: transform .2s ease, color .2s ease;
         }   
@@ -152,6 +152,45 @@
         }
 
     /* fim do servico */
+
+    /*parceiros*/
+        #parceiros div#mobileMenu{
+            background-color:#f7921ed8;
+        }
+
+        #parceiros #nav_list{
+            color: var(--color05) !important;
+
+        }
+
+        #parceiros #social_media{
+            color: var(--color01);
+        }
+
+        #parceiros #social_media li a{
+            color: var(--color01);
+            text-decoration: none;
+            transition: transform .2s ease, color .2s ease;
+        }   
+        #parceiros #social_media li a:hover{
+            transform: scale(1.2);
+            color: var(--color08);
+
+        }   
+
+        /* Link ativo - com barra e cor diferente */
+        #parceiros #nav_list .list.active a,
+        #parceiros #nav_list .list a:active{
+            color: var(--color01);
+            border-bottom: 3px solid var(--color01);
+        }
+
+        /* Hover - feedback visual ao passar o mouse */
+        #parceiros #nav_list .list a:hover{
+            color: var(--color01);
+            border-bottom: 3px solid var(--color01);
+        }
+    /*fim dos parceiros*/
 
 
 
@@ -247,5 +286,21 @@
         border-right: 3px solid var(--color05);
         padding-right: 10px;
     }
+
+    /*Alterando as cores no menusMobile, 
+    parceiros*/
+
+    /*parceiros*/
+    #parceiros    #mobileNavList .list.active a{
+        color: var(--color02);
+        border-right: 3px solid var(--color02);
+    }  
+    
+    #parceiros  #mobileNavList .list a:hover{
+        color: var(--color02);
+        border-right: 3px solid var(--color02);
+        padding-right: 10px;
+    }
+    /**/
 }
 
