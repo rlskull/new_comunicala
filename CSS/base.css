@@ -21,12 +21,13 @@
   --cor-texto: #3a3335;
   --color01:#3a3335;
   --color02:#602505;
-  --color03:#b94709;
+  --color03:#b84709;
   --color04:#f15a24;
   --color05:#f7931e;
   --color06:#48736b;
   --color07:#c6d8d3;
   --color08:#f7f7f2;
+  --color09:#9c3c08;
 
 /*variaveis para os links*/
 /* LINKS DO MENU*/
@@ -37,8 +38,8 @@
 --link-contatos:"contatos.html";
 
 /*LINKS REDES SOCIAIS*/
---link-whatsapp:"";
---link-instagram:"";
+--link-whatsapp:"https://wa.me/5511987654321";
+--link-instagram:"https://www.instagram.com/comunicala.tils/";
 --link-linkedin:"https://www.linkedin.com/in/comunicala-vozes-entre-os-povos-5a1a68219/?originalSubdomain=br";
 
 }

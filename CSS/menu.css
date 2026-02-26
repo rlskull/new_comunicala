@@ -113,36 +113,45 @@
     background-color: #602505d8;
 }
 
-#servicos div#mobileMenu{
-    background-color: #b94709d8;
-}
+    /* servicos */
+        #servicos div#mobileMenu{
+            background-color: var(--color09);
+        }
 
-#servicos #nav_list{
-    color: var(--color01) !important;
+        #servicos #nav_list{
+            color: var(--color05) !important;
 
-}
+        }
 
-#servicos #social_media{
-    color: var(--color01);
-}
+        #servicos #social_media{
+            color: var(--color01);
+        }
 
-#servicos #social_media li a{
-    color: var(--color01);
-}
+        #servicos #social_media li a{
+            color: var(--color01);
+            text-decoration: none;
+            transition: transform .2s ease, color .2s ease;
+        }   
+        #servicos #social_media li a:hover{
+            transform: scale(1.2);
+            color: var(--color08);
 
-/* Link ativo - com barra e cor diferente */
-/* #servicos #nav_list .list.active a,
-#servicos #nav_list .list a:active{
-    color: var(--color02);
-    border-bottom: 3px solid var(--color02);
-} */
+        }   
 
-/* Hover - feedback visual ao passar o mouse */
-/* #servicos #nav_list .list a:hover{
-    color: var(--color02);
-    border-bottom: 3px solid var(--color02);
-} */
+        /* Link ativo - com barra e cor diferente */
+        #servicos #nav_list .list.active a,
+        #servicos #nav_list .list a:active{
+            color: var(--color05);
+            border-bottom: 3px solid var(--color05);
+        }
 
+        /* Hover - feedback visual ao passar o mouse */
+        #servicos #nav_list .list a:hover{
+            color: var(--color05);
+            border-bottom: 3px solid var(--color05);
+        }
+
+    /* fim do servico */
 
 
 

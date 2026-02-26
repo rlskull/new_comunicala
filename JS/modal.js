@@ -11,16 +11,30 @@ document.querySelectorAll(".equipe").forEach(item => {
         document.getElementById("modalConteudo").innerText = texto;
 
         document.getElementById("modalEquipe").style.display = "flex";
+
+        document.body.style.overflow = "hidden";
     });
 });
 
-document.querySelector(".close-modal").addEventListener("click", () => {
-    document.getElementById("modalEquipe").style.display = "none";
-});
+// document.querySelector(".close-modal").addEventListener("click", () => {
+//     document.getElementById("modalEquipe").style.display = "none";
+// });
+
+const closeBtn = document.querySelector(".close-modal");
+
+if (closeBtn) {
+    closeBtn.addEventListener("click", () => {
+        document.getElementById("modalEquipe").style.display = "none";
+
+        document.body.style.overflow = "auto";
+    });
+}
 
 document.getElementById("modalEquipe").addEventListener("click", (e) => {
     if (e.target === e.currentTarget) {
         e.currentTarget.style.display = "none";
+
+        document.body.style.overflow = "auto";
     }
 });
 
