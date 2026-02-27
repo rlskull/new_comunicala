@@ -3,21 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quem somos</title>
+    <title>Página inicial</title>
     <link rel="stylesheet" href="./CSS/base.css">
     <link rel="stylesheet" href="./CSS/animation.css">
     <link rel="stylesheet" href="./CSS/menu.css">
-    <link rel="stylesheet" href="./CSS/qs01inicio.css">
-    <link rel="stylesheet" href="./CSS/qs02inicio.css">
-    <link rel="stylesheet" href="./CSS/qs03equipe.css">
+    <link rel="stylesheet" href="./CSS/contatos01formulario.css">
+    <link rel="stylesheet" href="./CSS/formulario.css">
     <link rel="stylesheet" href="./CSS/footer.css">
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
-<body style="background-color: var(--color02);">
-    <header id="quemsomos">
-        <div id="top_header">
+<body style="background-color: var(--color06);">
+    <header id="contato">
+<div id="top_header">
         <nav id="navbar">
             <div id="logo_header">
                 <img id="logo01Header" src="./IMG/logo_01.png" alt="Logotipo circular do projeto “ComunicAla – Vozes entre os Povos”. O logo apresenta silhuetas de perfis humanos em tons de laranja, vermelho e amarelo, com padrões gráficos inspirados em referências culturais. As silhuetas se sobrepõem dentro de um círculo branco, envolto por arcos coloridos em laranja, amarelo e verde-claro. O nome “Comunicala” aparece em destaque no centro, inclinado, com tipografia espessa em marrom, e abaixo está o texto “Vozes entre os Povos”."> 
@@ -47,7 +46,7 @@
                         <a class="js-link" data-var="--link-inicio">INÍCIO</a>
                     </li>
                     <li class="separator">|</li>
-                    <li class="list active">
+                    <li class="list">
                         <a class="js-link" data-var="--link-quemsomos">QUEM SOMOS</a>
                     </li>
                     <li class="separator">|</li>
@@ -59,7 +58,7 @@
                         <a class="js-link" data-var="--link-parceiros">PARCEIROS</a>
                     </li>
                     <li class="separator">|</li>
-                    <li class="list">
+                    <li class="list active">
                         <a class="js-link" data-var="--link-contatos">CONTATOS</a>
                     </li>
                 </ul>
@@ -74,7 +73,7 @@
                         <li class="list">
                             <a class="js-link" data-var="--link-inicio">INÍCIO</a>
                         </li>
-                        <li class="list active">
+                        <li class="list">
                             <a class="js-link" data-var="--link-quemsomos">QUEM SOMOS</a>
                         </li>
                         <li class="list">
@@ -83,7 +82,7 @@
                         <li class="list">
                             <a class="js-link" data-var="--link-parceiros">PARCEIROS</a>
                         </li>
-                        <li class="list">
+                        <li class="list active">
                             <a class="js-link" data-var="--link-contatos">CONTATOS</a>
                         </li>
                     </ul>
@@ -95,151 +94,62 @@
     </header>
  
     <main>
-         <!--Section01 quem somos PARTE01 01-->
-        <section>
-        <div id="containerQS01">
-            <div id="imgQS01">
-                <img id="imgBackground" class="fade-in" src="./IMG/logo_05.png" alt="logocompleto">
-            </div>
-            <div class="caixaTXT">
-                <div class="titulosAgrupados">
-                <h2 class="ttSubtitulos">QUEM</h2>
-                <h1 class="ttTitulos">SOMOS?</h1>
-                </div>
-                <p class="ttPadrao">
-                    A Comunicala nasceu com o objetivo de promover a inclusão e diversidades à comunidade surda através da tradução e interpretação no par linguístico Libras/Português, oferecemos acessibilidade em palestras, workshops, show, treinamentos e lives, além de serviços como legenda, audiodescrição e capacitação empresarial. Somos uma empresa liderada por mulheres negras que acreditam que a soma de seus esforços e ações são capazes de gerar grandes revoluções.
-                </p>
+<!-- Seção de Bem-vindos -->
+        <section id="fundoColorido">
+            <div id="container01Contatos">
+                <!--ESQUERDA-->
+                    <!--formulário-->
+                        <form id="formContato" action="#" method="post">
 
-            </div>
-            </div>
-        </section>
+                            <div class="grupoInput">
+                                <label for="nome" class="ttSubtitulos">Nome completo</label>
+                                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                            </div>
 
-        <!--Section02 quem somos PARTE02-->
-        <section>
-            <div id="containerQS02">
-                <div id="imgQS02">
-                    <img id="imgPadrao03" class="fade-in" src="./IMG/imgPadrao03.png" alt="logocompleto">
-                </div>
-                <div class="caixaTXT">
-                    <div id="containerQSMissao">
-                        <div class="mvv">
-                        <img src="./img/missao.png" class="formatMVV">
-                    <p class="ttPadrao">
-                         Desenvolver com excelência a prestação de serviço em acessibilidade, na busca pela satisfação das necessidades dos cooperados, clientes e colaboradores.
+                            <div class="grupoInput">
+                                <label for="email" class="ttSubtitulos">E-mail</label>
+                                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                            </div>
 
-                    </p>
-                </div>
-                        <div class="mvv">
-                        <img src="./img/visao.png" class="formatMVV">
-                    <p class="ttPadrao">
-                        Ser reconhecida e consolidar-se como um grupo de mulheres destinado a garantir o respeito e convívio com as diferenças no sentido de assegurar os direitos da comunidade em relação às diversidades. <br>
-                    </p></div>
-                        <div class="mvv">
-                            <img src="./img/valores.png" class="formatMVV">
-                    <p class="ttPadrao">
-                        Motivação | Comunicação | Confiabilidade | Integridade | Acessibilidade | Ética.  <br>
-                    </p></div>
+                            <div class="grupoInput">
+                                <label for="telefone" class="ttSubtitulos">Telefone</label>
+                                <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000">
+                            </div>
+
+                            <div class="grupoInput">
+                                <label for="assunto" class="ttSubtitulos">Assunto</label>
+                                <input type="text" id="assunto" name="assunto" placeholder="Sobre o que deseja falar?" required>
+                            </div>
+
+                            <div class="grupoInput">
+                                <label for="mensagem" class="ttSubtitulos">Mensagem</label>
+                                <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem" required></textarea>
+                            </div>
+
+                            <div class="grupoBotoes">
+                                <button type="submit" class="btnEnviar">Enviar mensagem</button>
+                                <button type="reset" class="btnLimpar">Limpar</button>
+                            </div>
+
+                        </form>
+                    <!--fim do formulário-->
+
+                <!--DIREITA-->
+                <div class="ladoDireito">
+                    <div class="caixaTXT">
+                        <h1 class="ttTitulos">CONTATOS</h1>
+                        <p class="ttPadrao">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+                            tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                        </p>
                     </div>
-                    <!-- <h2 class="ttSubtitulos">QUEM</h2>
-                    <p class="ttPadrao">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. <br>
-                    </p>
-                    <h2 class="ttSubtitulos">QUEM</h2>
-                    <p class="ttPadrao">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. <br>
-                    </p>
-                    <h2 class="ttSubtitulos">QUEM</h2>
-                    <p class="ttPadrao">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. <br>
-                    </p> -->
 
-                </div>
-            </div>
-        </section>
-
-        <!--Section03 Equipe-->
-        <section class="fundoBranco">
-            <div id="containerQS03">
-                <!--título principais serviços-->
-                <div id="imgTituloQS">
-                    <img id="simbolo01" src="./IMG/imgppservicos.png" alt="texto">
-                       <div class="titulosAgrupados">
-                            <h2 class="ttSubtitulos">NOSSA</h2>
-                            <h1 class="ttTitulos">EQUIPE</h1>
-                        </div>
+                    <div id="imgBV01">
+                        <img id="imgLogo04" class="fade-in img-bw img-bw imagemPersistente" src="./IMG/imgPadrao04.png" alt="logocompleto">
+                    </div>
                 </div>
 
-                <!--Container para equipe-->
-                <div id="equipeQS">
-                            <div class="equipe" 
-         data-img="./IMG/equipe.png" 
-         data-titulo="ELISANGELA DE JESUS"
-         data-texto="É uma mulher preta, intérprete de Língua Brasileira de Sinais atuante na cultura surda e na área de tradução/interpretação há 10 anos. Especialista em Tradução e Interpretação de Libras/Português pelo Instituto Singularidades. Mestranda em Linguística Aplicada e Estudos da Língua - PUC.">
-        <img class="fade-in" src="./IMG/equipe.png">
-        <div class="overlay ttTitulos">SAIBA +</div>
-    </div>
-
-    <div class="equipe" 
-         data-img="./IMG/equipe2.png"
-         data-titulo="Lorem Ipsum"
-         data-texto="Texto da pessoa 2">
-        <img class="ftIMG fade-in img-bw imagemPersistente" src="./IMG/equipe.png">
-        <div class="overlay ttTitulos">SAIBA +</div>
-    </div>
-
-    <div class="equipe" 
-         data-img="./IMG/equipe3.png" 
-         data-titulo="Lorem Ipsum"
-         data-texto="Texto da pessoa 3">
-        <img class="ftIMG fade-in img-bw imagemPersistente" src="./IMG/equipe.png">
-        <div class="overlay ttTitulos">SAIBA +</div>
-    </div>
-
-    <div class="equipe" 
-         data-img="./IMG/equipe4.png"
-         data-titulo="Lorem Ipsum"
-         data-texto="Texto da pessoa 4">
-        <img class="ftIMG fade-in img-bw imagemPersistente" src="./IMG/equipe.png">
-        <div class="overlay ttTitulos">SAIBA +</div>
-    </div>
-
-    <div class="equipe" 
-         data-img="./IMG/equipe5.png"
-         data-titulo="Lorem Ipsum"
-         data-texto="Texto da pessoa 5">
-        <img class="ftIMG fade-in img-bw imagemPersistente" src="./IMG/equipe.png">
-        <div class="overlay ttTitulos">SAIBA +</div>
-    </div>
-
-    <div class="equipe" 
-         data-img="./IMG/equipe6.png"
-         data-titulo="Lorem Ipsum"
-         data-texto="Texto da pessoa 6">
-        <img class="ftIMG fade-in img-bw imagemPersistente" src="./IMG/equipe.png">
-        <div class="overlay ttTitulos">SAIBA +</div>
-    </div>
-
-
             </div>
-
-<!-- MODAL -->
-<div id="modalEquipe" class="modal">
-    <div class="modal-wrapper">
-
-        <div class="modal-left">
-            <img id="modalImg" src="">
-        </div>
-
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h2 id="modalTitulo" class="ttTitulos"></h2>
-            <div id="modalConteudo" class="ttPadrao"></div>
-        </div>
-
-    </div>
-</div>
-
-
         </section>
 
     </main>
@@ -304,11 +214,12 @@
                         
 
     </footer>
-
+     
     <script src="./JS/nav.js"></script>
     <script src="./JS/link.js"></script>
-    <script src="./JS/modal.js"></script>
     <script src="./JS/animation.js"></script>
+    <script src="./JS/parallax.js"></script>
+
 
 </body>
 </html>
