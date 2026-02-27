@@ -58,14 +58,17 @@
 @media screen and (max-width: 768px){
     #containerBV04{
         width: 90vw;
-        height: 800px;
+        height: 900px;
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: auto;
+        padding-bottom: 1000px; /* Ajuste para evitar corte do conteúdo */
     }
 
     #imgBV04{
         grid-column: 2 / span 5;
         grid-row: 1 / span 3;
+        padding: 50px 0; /* Ajuste para dar mais espaço ao redor da imagem */
+        
     }
 
     #imgLogo04{
