@@ -34,7 +34,7 @@
 .carrossel-track {
     display: flex;
     gap: 40px;
-    animation: deslizar 25s linear infinite;
+    animation: deslizar 50s linear infinite;
 }
 
 .carrossel-track img {
