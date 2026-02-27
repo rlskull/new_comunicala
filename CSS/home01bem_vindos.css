@@ -86,7 +86,7 @@
 @media screen and (max-width: 768px){
     #containerBV01{
         width: 90vw;
-        height: 800px;
+        height: 860px;/* altura ajustada para acomodar o conteúdo em telas menores */
         grid-template-columns: repeat(6, 1fr);
         background-image: url("../IMG/background_bem_vindo_mobile.png");
         background-position: center;
