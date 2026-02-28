@@ -173,77 +173,103 @@
         </section>
 
     </main>
+<footer>
+    <div id="fundoInfo">
+        <div id="containerInfo">
+            <div id="divFooterGroup">
 
-    <footer>
-        <div id="fundoInfo">
-            <div id="containerInfo">
-                <div id="divFooterGroup">
-                    <div class="divFooter">
-                        <img id="logoFooter" src="./IMG/logo_01.png"
-                            alt="Logotipo circular do projeto “ComunicAla – Vozes entre os Povos”. O logo apresenta silhuetas de perfis humanos em tons de laranja, vermelho e amarelo, com padrões gráficos inspirados em referências culturais. As silhuetas se sobrepõem dentro de um círculo branco, envolto por arcos coloridos em laranja, amarelo e verde-claro. O nome “Comunicala” aparece em destaque no centro, inclinado, com tipografia espessa em marrom, e abaixo está o texto “Vozes entre os Povos”.">
-                        <p class="ttPadrao">
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                            tincidunt ut laoreet dolore magna aliquam erat volutpat.
-                        </p>
+                <!-- BLOCO 1 -->
+                <section class="divFooter" aria-labelledby="footer-sobre">
+                    <h2 id="footer-sobre" class="visually-hidden">Sobre o projeto</h2>
+
+                    <img id="logoFooter"
+                         src="./IMG/logo_01.png"
+                         alt="Logotipo do projeto ComunicAla Vozes entre os Povos">
+
+                    <p class="ttPadrao">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+                        tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                    </p>
+                </section>
+
+                <!-- BLOCO 2 -->
+                <nav class="divFooter" aria-labelledby="footer-mapa">
+                    <div class="umFooter">
+                        <h2 id="footer-mapa" class="ttTitulos">MAPA DO SITE</h2>
                     </div>
 
-                    <div class="divFooter">
-                        <div class="umFooter">
-                            <h1 class="ttTitulos"> MAPA DO SITE</h1>
-                        </div>
-                        <div class="doisFooter titulosAgrupados">
-                            <ul id="mapaSite">
-                                <li class="itensMapaSite ttPadrao active"><a class="js-link"
-                                        data-var="--link-inicio">INÍCIO</a></li>
-                                <li class="itensMapaSite ttPadrao"><a class="js-link" data-var="--link-quemsomos">QUEM
-                                        SOMOS</a></li>
-                                <li class="itensMapaSite ttPadrao"><a class="js-link"
-                                        data-var="--link-servicos">SERVIÇOS</a></li>
-                                <li class="itensMapaSite ttPadrao"><a class="js-link"
-                                        data-var="--link-parceiros">PARCEIROS</a></li>
-                                <li class="itensMapaSite ttPadrao"><a class="js-link"
-                                        data-var="--link-contatos">CONTATOS</a></li>
-                            </ul>
-                        </div>
+                    <div class="doisFooter titulosAgrupados">
+                        <ul id="mapaSite">
+                            <li class="itensMapaSite ttPadrao">
+                                <a class="js-link" data-var="--link-inicio">INÍCIO</a>
+                            </li>
+                            <li class="itensMapaSite ttPadrao">
+                                <a class="js-link" data-var="--link-quemsomos">QUEM SOMOS</a>
+                            </li>
+                            <li class="itensMapaSite ttPadrao">
+                                <a class="js-link" data-var="--link-servicos">SERVIÇOS</a>
+                            </li>
+                            <li class="itensMapaSite ttPadrao">
+                                <a class="js-link" data-var="--link-parceiros">PARCEIROS</a>
+                            </li>
+                            <li class="itensMapaSite ttPadrao">
+                                <a class="js-link" data-var="--link-contatos">CONTATOS</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
 
+                <!-- BLOCO 3 -->
+                <section class="divFooter" aria-labelledby="footer-contato">
+                    <div class="umFooter">
+                        <h2 id="footer-contato" class="ttTitulos">CONTATOS</h2>
                     </div>
 
-                    <div class="divFooter">
-                        <div class="umFooter">
-                            <h1 class="ttTitulos">CONTATOS</h1>
-                        </div>
-                        <div class="doisFooter">
-                            <div id="contatoFooter">
-                                <h1 class="ttPadrao">
+                    <div class="doisFooter">
+                        <address id="contatoFooter">
+
+                            <p class="ttPadrao">
+                                <a class="js-link"
+                                   data-var="--link-whatsapp" aria-label="Falar no WhatsApp pelo número 11 99999 9999">
                                     (11) 99999-9999
-                                </h1>
-                                <div id="socialFooter">
-                                    <a class="js-link" data-var="--link-whatsapp">
-                                        <i class="fa-brands fa-whatsapp"></i>
-                                    </a>
-                                    <a class="js-link" data-var="--link-linkedin">
-                                        <i class="fa-brands fa-linkedin-in"></i>
-                                    </a>
-                                    <a class="js-link" data-var="--link-instagram">
-                                        <i class="fa-brands fa-instagram"></i>
-                                    </a>
-                                </div>
+                                </a>
+                            </p>
+
+                            <div id="socialFooter">
+                                <a class="js-link"
+                                   data-var="--link-whatsapp"
+                                   aria-label="WhatsApp">
+                                    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                                </a>
+
+                                <a class="js-link"
+                                   data-var="--link-linkedin"
+                                   aria-label="LinkedIn">
+                                    <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                                </a>
+
+                                <a class="js-link"
+                                   data-var="--link-instagram"
+                                   aria-label="Instagram">
+                                    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                                </a>
                             </div>
-                        </div>
+
+                        </address>
                     </div>
-                </div>
+                </section>
 
             </div>
         </div>
-        <div id="desenvolvedor">
-            <p class="ttSubtitulos titulosAgrupados">
-                STUDIO RLSKULL<br>2026 - TODOS OS DIREITOS RESERVADOS ©
-            </p>
+    </div>
 
-        </div>
-
-
-    </footer>
+    <div id="desenvolvedor">
+        <p class="ttSubtitulos titulosAgrupados">
+            STUDIO RLSKULL<br>
+            <span>2026 - TODOS OS DIREITOS RESERVADOS ©</span>
+        </p>
+    </div>
+</footer>
 
     <script src="./JS/nav.js"></script>
     <script src="./JS/link.js"></script>
