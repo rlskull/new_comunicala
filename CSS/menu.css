@@ -1,6 +1,5 @@
 #top_header{
     margin: 0 auto;
-    /* background-color: var(--color01); */
     width: 80vw;
 }
 
@@ -12,21 +11,22 @@
 
 #navbar{
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
 }
 
 #menu{
-    /* background-color: var(--color01); */
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 }
 
+/* ---------------- SOCIAL ---------------- */
+
 #social_media{
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     gap: 20px;
     list-style: none;
     margin-bottom: 10px;
@@ -37,26 +37,29 @@
     font-weight: var(--peso-light);
 }
 
-#nav_list{
-    display: flex;
-    justify-content: end;
-    list-style: none;
-    gap: 10px;
-    margin-right: 20px;
-    color: var(--color08);
-    order: 2;
-}
-
 #social_media li a{
     color: var(--color05);
     text-decoration: none;
     transition: transform .2s ease, color .2s ease;
-}   
-#social_media li a:hover{
+}
+
+#social_media li a:hover,
+#social_media li a:focus-visible{
     transform: scale(1.2);
     color: var(--color07);
+}
 
-}   
+/* ---------------- MENU DESKTOP ---------------- */
+
+#nav_list{
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    gap:30px;
+    margin-right: 20px;
+    color: var(--color08);
+    order: 2;
+}
 
 #nav_list .list a{
     font-family: var(--fonte-principal);
@@ -68,34 +71,40 @@
     transition: all 0.3s ease;
 }
 
-/* Link ativo - com barra e cor diferente */
-#nav_list .list.active a,
-#nav_list .list a:active{
+/* Link ativo */
+#nav_list .list.active a{
     color: var(--color05);
     border-bottom: 3px solid var(--color05);
     font-weight: var(--peso-padrao);
 }
 
-/* Hover - feedback visual ao passar o mouse */
-#nav_list .list a:hover{
+/* Hover e foco */
+#nav_list .list a:hover,
+#nav_list .list a:focus-visible{
     color: var(--color05);
     border-bottom: 3px solid var(--color05);
 }
 
-/* Estilos para os separadores (|) */
-#nav_list .separator{
-    display: flex;
-    align-items: center;
-    color: var(--color08);
-    font-weight: var(--peso-light);
-}
+/* ---------------- BOTÃO MOBILE ---------------- */
 
-/* Botão mobile escondido por padrão */
-#mobileBtn{ 
+#mobileBtn{
     display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--color08);
 }
 
-/* Menu mobile escondido por padrão */
+/* Foco acessível global */
+a:focus-visible,
+button:focus-visible{
+    outline: 3px solid var(--color05);
+    outline-offset: 3px;
+}
+
+/* ---------------- MENU MOBILE ---------------- */
+
 #mobileMenu{
     display: none;
     position: absolute;
@@ -106,72 +115,44 @@
     min-width: 200px;
 }
 
-
-
-/*personalizando as cores dos demais menus: quem somos/ serviços/ parceiros/ contatos*/
-#quemsomos div#mobileMenu{
-    background-color: #602505d8;
+/* Quando JS adiciona .active */
+#mobileMenu.active{
+    display: block;
 }
 
-    /* servicos */
-        #servicos div#mobileMenu{
-            background-color:#9c3c08d8;
+#mobileMenu[hidden]{
+    display: none !important;
+}
+
+/* --------- AJUSTE DE CORES DEMAIS PÁGINAS --------- */
+
+        #quemsomos #mobileMenu {
+            background-color: #602505d8;
         }
 
-        #servicos #nav_list{
-            color: var(--color05) !important;
-
+        /* servicos */
+        #servicos #mobileMenu {
+            background-color: #9c3c08d8;
         }
 
-        #servicos #social_media{
-            color: var(--color05);
+        /* contato */
+        #contato #mobileMenu {
+            background-color: #48736bd8;
         }
 
-        #servicos #social_media li a{
-            color: var(--color05);
-            text-decoration: none;
-            transition: transform .2s ease, color .2s ease;
-        }   
-        #servicos #social_media li a:hover{
-            transform: scale(1.2);
-            color: var(--color08);
 
-        }   
-
-        /* Link ativo - com barra e cor diferente */
-        #servicos #nav_list .list.active a,
-        #servicos #nav_list .list a:active{
-            color: var(--color05);
-            border-bottom: 3px solid var(--color05);
+        /* parceiros */
+        #parceiros #mobileMenu {
+            background-color: #f7921ed8;
+            
         }
 
-        /* Hover - feedback visual ao passar o mouse */
-        #servicos #nav_list .list a:hover{
-            color: var(--color05);
-            border-bottom: 3px solid var(--color05);
-        }
-
-    /* fim do servico */
-
-    /*parceiros*/
-        #parceiros div#mobileMenu{
-            background-color:#f7921ed8;
-        }
-
-        #parceiros #nav_list{
-            color: var(--color05) !important;
-
-        }
-
-        #parceiros #social_media{
-            color: var(--color01);
-        }
-
-        #parceiros #social_media li a{
+        #parceiros #social_media li a {
             color: var(--color01);
             text-decoration: none;
             transition: transform .2s ease, color .2s ease;
-        }   
+        }
+
         #parceiros #social_media li a:hover{
             transform: scale(1.2);
             color: var(--color08);
@@ -190,25 +171,18 @@
             color: var(--color01);
             border-bottom: 3px solid var(--color01);
         }
-    /*fim dos parceiros*/
-
-
-/* contato */
-        #contato div#mobileMenu{
-            background-color:#48736bd8;
-        }
-
-/*fim do contato*/
 
 
 
-/* Responsividade */
+
+/* ---------------- RESPONSIVO ---------------- */
+
 @media screen and (max-width: 768px){
 
     #logo_header img{
         width: 90px;
     }
-    
+
     #nav_list{
         display: none;
     }
@@ -218,53 +192,43 @@
         width: 100%;
         justify-content: space-between;
         align-items: center;
-        gap: 0;
     }
 
+    /* TELEFONE escondido no mobile */
     #tel{
         display: none;
     }
 
+    /* ÍCONES permanecem ao lado do botão */
     #social_media{
         margin-bottom: 0;
         margin-right: 0;
         gap: 10px;
         order: 1;
-        justify-content: flex-between;
+        justify-content: flex-end;
         padding: 10px 15px;
         flex: 1;
     }
 
-    /* Mostra botão mobile alinhado à direita */
+    /* Botão hamburguer */
     #mobileBtn{
         display: block;
-        background: none;
-        border: none;
-        font-size: 1.5rem;
-        cursor: pointer;
-        color: var(--color08);
         margin: 0;
         padding: 10px 15px;
         order: 2;
     }
 
-    /* Mostra o menu mobile quando tem classe .active */
-    #mobileMenu.active{
-        display: block;
-    }
-
-    /* Estilizar a lista do menu mobile */
+    /* Menu mobile */
     #mobileNavList{
         display: flex;
         flex-direction: column;
-        align-items: end;
+        align-items: flex-end;
         list-style: none;
         gap: 0;
         margin: 0;
         padding: 15px 20px;
     }
 
-    /* Estilos dos links do menu mobile */
     #mobileNavList .list a{
         font-family: var(--fonte-principal);
         text-decoration: none;
@@ -272,8 +236,22 @@
         font-weight: var(--peso-light);
         padding: 10px 0;
         display: block;
-        border-left: 3px solid transparent;
+        border-right: 3px solid transparent;
         transition: all 0.3s ease;
+    }
+
+    #mobileNavList .list.active a{
+        color: var(--color05);
+        border-right: 3px solid var(--color05);
+        font-weight: var(--peso-padrao);
+        padding-right: 10px;
+    }
+
+    #mobileNavList .list a:hover,
+    #mobileNavList .list a:focus-visible{
+        color: var(--color05);
+        border-right: 3px solid var(--color05);
+        padding-right: 10px;
     }
 
     /* Link ativo do menu mobile - com barra à esquerda e cor diferente */
@@ -305,6 +283,9 @@
         border-right: 3px solid var(--color02);
         padding-right: 10px;
     }
-    /**/
 }
 
+/* Garante que hidden sempre esconda o menu */
+#mobileMenu[hidden]{
+    display: none !important;
+}

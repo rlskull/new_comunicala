@@ -1,151 +1,166 @@
-// // Script para gerenciar o link ativo no menu desktop e mobile
+// Aguarda o HTML carregar completamente
+document.addEventListener('DOMContentLoaded', function () {
 
-// document.addEventListener('DOMContentLoaded', function() {
-//     const navLinks = document.querySelectorAll('#nav_list .list');
-//     const mobileNavLinks = document.querySelectorAll('#mobileNavList .list');
-//     const mobileBtn = document.getElementById('mobileBtn');
-//     const mobileMenu = document.getElementById('mobileMenu');
+    /* =====================================================
+       SELEÇÃO DOS ELEMENTOS PRINCIPAIS
+    ===================================================== */
 
-//     // Função para remover .active de todos os links (desktop e mobile)
-//     function removeActive() {
-//         navLinks.forEach(link => link.classList.remove('active'));
-//         mobileNavLinks.forEach(link => link.classList.remove('active'));
-//     }
+    // Itens do menu desktop
+    const navItems = document.querySelectorAll('#nav_list .list');
 
-//     // Gerenciar menu desktop
-//     navLinks.forEach((link, index) => {
-//         link.addEventListener('click', function(e) {
-//             e.preventDefault();
-//             removeActive();
-//             navLinks[index].classList.add('active');
-//             mobileNavLinks[index].classList.add('active'); // Sincroniza com mobile
-//         });
-//     });
+    // Itens do menu mobile
+    const mobileNavItems = document.querySelectorAll('#mobileNavList .list');
 
-//     // Gerenciar menu mobile
-//     mobileNavLinks.forEach((link, index) => {
-//         link.addEventListener('click', function(e) {
-//             e.preventDefault();
-//             removeActive();
-//             mobileNavLinks[index].classList.add('active');
-//             navLinks[index].classList.add('active'); // Sincroniza com desktop
-//             // Fecha o menu mobile após clicar
-//             mobileMenu.classList.remove('active');
-//             // Retorna ícone para hambúrguer
-//             const icon = mobileBtn.querySelector('i');
-//             if (icon) {
-//                 icon.classList.add('fa-bars');
-//                 icon.classList.remove('fa-x');
-//             }
-//         });
-//     });
-
-//     // Gerenciar abertura/fechamento do menu mobile
-//     if (mobileBtn && mobileMenu) {
-//         const header = document.querySelector('header');
-//         mobileBtn.addEventListener('click', function() {
-//             mobileMenu.classList.toggle('active');
-//             header.classList.toggle('menu-active'); // Adiciona/remove classe no header
-//             // Toggle do ícone (hambúrguer para X)
-//             const icon = mobileBtn.querySelector('i');
-//             if (icon) {
-//                 icon.classList.toggle('fa-bars');
-//                 icon.classList.toggle('fa-x');
-//             }
-//         });
-//     }
-// });
-
-// Script para gerenciar o link ativo no menu desktop e mobile
-
-document.addEventListener('DOMContentLoaded', function() {
-    const navLinks = document.querySelectorAll('#nav_list .list');
-    const mobileNavLinks = document.querySelectorAll('#mobileNavList .list');
+    // Botão hamburguer
     const mobileBtn = document.getElementById('mobileBtn');
+
+    // Container do menu mobile
     const mobileMenu = document.getElementById('mobileMenu');
 
-    // Função para remover .active de todos os links (desktop e mobile)
+    // Header completo, usado para aplicar classe visual
+    const header = document.querySelector('header');
+
+
+    /* =====================================================
+       CONTROLE DE LINK ATIVO
+    ===================================================== */
+
+    // Remove a classe active de todos os itens
     function removeActive() {
-        navLinks.forEach(link => link.classList.remove('active'));
-        mobileNavLinks.forEach(link => link.classList.remove('active'));
+        navItems.forEach(item => item.classList.remove('active'));
+        mobileNavItems.forEach(item => item.classList.remove('active'));
     }
 
-    // ----------------------------
-    // DESKTOP
-    // ----------------------------
-    navLinks.forEach((item, index) => {
-        item.addEventListener('click', function(e) {
+    // Define o item ativo baseado no índice
+    function setActive(index) {
+        removeActive();
+
+        if (navItems[index]) {
+            navItems[index].classList.add('active');
+        }
+
+        if (mobileNavItems[index]) {
+            mobileNavItems[index].classList.add('active');
+        }
+    }
+
+
+    /* =====================================================
+       SCROLL SUAVE PARA ÂNCORAS INTERNAS
+    ===================================================== */
+
+    function smoothScrollTo(targetSelector) {
+        const target = document.querySelector(targetSelector);
+
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    }
+
+
+    /* =====================================================
+       CONTROLE DO MENU MOBILE
+    ===================================================== */
+
+    // Abrir menu mobile
+    function openMobileMenu() {
+
+        mobileMenu.hidden = false;                // Remove hidden
+        mobileMenu.classList.add('active');       // Ativa classe visual
+        header.classList.add('menu-active');      // Caso use efeito visual
+        mobileBtn.setAttribute('aria-expanded', 'true');
+
+        // Troca ícone para X
+        const icon = mobileBtn.querySelector('i');
+        if (icon) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-x');
+        }
+    }
+
+    // Fechar menu mobile
+    function closeMobileMenu() {
+
+        mobileMenu.hidden = true;                 // Esconde semanticamente
+        mobileMenu.classList.remove('active');
+        header.classList.remove('menu-active');
+        mobileBtn.setAttribute('aria-expanded', 'false');
+
+        // Volta ícone para hamburguer
+        const icon = mobileBtn.querySelector('i');
+        if (icon) {
+            icon.classList.add('fa-bars');
+            icon.classList.remove('fa-x');
+        }
+    }
+
+    // Alternar estado do menu
+    function toggleMobileMenu() {
+        const isExpanded = mobileBtn.getAttribute('aria-expanded') === 'true';
+
+        if (isExpanded) {
+            closeMobileMenu();
+        } else {
+            openMobileMenu();
+        }
+    }
+
+
+    /* =====================================================
+       NAVEGAÇÃO DESKTOP E MOBILE
+    ===================================================== */
+
+    function handleNavigation(items, isMobile = false) {
+
+        items.forEach((item, index) => {
 
             const anchor = item.querySelector('a');
-            const href = anchor ? anchor.getAttribute('href') : '';
+            if (!anchor) return;
 
-            // Se for âncora interna (#algumaCoisa)
-            if (href.startsWith('#')) {
-                e.preventDefault(); // bloqueia somente âncora interna
-                removeActive();
-                navLinks[index].classList.add('active');
-                mobileNavLinks[index].classList.add('active');
+            anchor.addEventListener('click', function (e) {
 
-                const target = document.querySelector(href);
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
+                const href = anchor.getAttribute('href');
+
+                // Se for âncora interna
+                if (href && href.startsWith('#')) {
+
+                    e.preventDefault();        // Impede salto brusco
+                    setActive(index);          // Marca como ativo
+                    smoothScrollTo(href);      // Faz scroll suave
                 }
-            }
-            // Se NÃO começar com #, deixa o link navegar normalmente
-        });
-    });
 
-
-    // ----------------------------
-    // MOBILE
-    // ----------------------------
-    mobileNavLinks.forEach((item, index) => {
-        item.addEventListener('click', function(e) {
-
-            const anchor = item.querySelector('a');
-            const href = anchor ? anchor.getAttribute('href') : '';
-
-            // Se for âncora interna
-            if (href.startsWith('#')) {
-                e.preventDefault();
-                removeActive();
-                mobileNavLinks[index].classList.add('active');
-                navLinks[index].classList.add('active');
-
-                const target = document.querySelector(href);
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
+                // Se for mobile, sempre fecha o menu após clique
+                if (isMobile) {
+                    closeMobileMenu();
                 }
-            } else {
-                // Se for outra página, deixa navegar normalmente,
-                // mas fecha o menu e volta o ícone antes de sair
-            }
-
-            // FECHAR menu mobile e resetar ícone ao clicar
-            mobileMenu.classList.remove('active');
-            const icon = mobileBtn.querySelector('i');
-            if (icon) {
-                icon.classList.add('fa-bars');
-                icon.classList.remove('fa-x');
-            }
-        });
-    });
-
-
-    // ----------------------------
-    // BOTÃO MOBILE (hambúrguer)
-    // ----------------------------
-    if (mobileBtn && mobileMenu) {
-        const header = document.querySelector('header');
-        mobileBtn.addEventListener('click', function() {
-            mobileMenu.classList.toggle('active');
-            header.classList.toggle('menu-active');
-
-            const icon = mobileBtn.querySelector('i');
-            if (icon) {
-                icon.classList.toggle('fa-bars');
-                icon.classList.toggle('fa-x');
-            }
+            });
         });
     }
+
+    // Aplica navegação nos dois menus
+    handleNavigation(navItems, false);
+    handleNavigation(mobileNavItems, true);
+
+
+    /* =====================================================
+       EVENTO DO BOTÃO HAMBURGUER
+    ===================================================== */
+
+    if (mobileBtn) {
+        mobileBtn.addEventListener('click', toggleMobileMenu);
+    }
+
+
+    /* =====================================================
+       FECHAR MENU COM TECLA ESC
+    ===================================================== */
+
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+            closeMobileMenu();
+        }
+    });
+
 });
