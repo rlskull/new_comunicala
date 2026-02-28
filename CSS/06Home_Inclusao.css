@@ -69,7 +69,7 @@
 
 /*Tablet*/
 @media screen and (min-width: 769px) and (max-width: 1180px){
-    #containerBV06{
+    /* #containerBV06{
         width: 90vw;
         height: 80vh;
         grid-template-columns: repeat(12, 1fr);
@@ -81,10 +81,10 @@
         grid-row: 1 / span 10;
         justify-content: center;
         height: 80%;
-    }
+    } */
 
     #imgPadrao02{
-        width: 400px;
+        width: 480px;
     }
 
     #containerBV06 .caixaTXT {
