@@ -59,3 +59,12 @@
     grid-template-rows: auto;
     gap: 5px;
 }
+
+@media (max-width: 768px) {
+    #parceiro03depoimento {
+        background-attachment: scroll;
+        height: auto;
+        min-height: 60vh;
+        padding: 60px 20px;
+    }
+}
