@@ -47,3 +47,12 @@
     color: var(--color05);
     margin-top: 15px;
 }
+
+@media (max-width: 768px) {
+    #parceiro03depoimento {
+        background-attachment: scroll;
+        height: auto;
+        min-height: 60vh;
+        padding: 60px 20px;
+    }
+}

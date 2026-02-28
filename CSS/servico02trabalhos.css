@@ -164,9 +164,9 @@ body.modal-open{
 
 /*Responsivo*/
 
-@media (max-width: 992px){
+@media (max-width: 768px){
    #containerS03{
-        width: 90vw;
+        width: 85vw;
         height: auto;
         min-height: 100vh;
         grid-template-columns: repeat(6, 1fr);
@@ -178,9 +178,6 @@ body.modal-open{
         gap: 70px;
         margin-top: 6rem;
     }
-}
-
-@media (max-width: 600px){
 
     .card-equipe{
         padding: 40px 25px 30px 25px;
@@ -206,10 +203,14 @@ body.modal-open{
     .card-conteudo p{
         font-size: 13px;
     }
-}
+
+    .card-decoracao img{
+        width: 100px;
+    }
+/* } */
 
 /*modal responsivo*/
-@media (max-width: 768px){
+/* @media (max-width: 768px){ */
 
     .modal-wrapper{
         flex-direction: column;
