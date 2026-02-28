@@ -20,6 +20,9 @@ document.addEventListener('DOMContentLoaded', function () {
     // Header completo, usado para aplicar classe visual
     const header = document.querySelector('header');
 
+    // Elementos focáveis dentro do menu mobile
+    const focusableSelectors = 'a, button, [tabindex]:not([tabindex="-1"])';
+
 
     /* =====================================================
        CONTROLE DE LINK ATIVO
@@ -67,10 +70,16 @@ document.addEventListener('DOMContentLoaded', function () {
     // Abrir menu mobile
     function openMobileMenu() {
 
-        mobileMenu.hidden = false;                // Remove hidden
+        if (!mobileMenu || !mobileBtn) return;
+
+        mobileMenu.hidden = false;                // Remove hidden semanticamente
         mobileMenu.classList.add('active');       // Ativa classe visual
         header.classList.add('menu-active');      // Caso use efeito visual
         mobileBtn.setAttribute('aria-expanded', 'true');
+        mobileBtn.setAttribute('aria-label', 'Fechar menu');
+
+        // Bloqueia scroll da página
+        document.body.style.overflow = 'hidden';
 
         // Troca ícone para X
         const icon = mobileBtn.querySelector('i');
@@ -78,15 +87,27 @@ document.addEventListener('DOMContentLoaded', function () {
             icon.classList.remove('fa-bars');
             icon.classList.add('fa-x');
         }
+
+        // Move foco para o primeiro elemento do menu
+        const focusables = mobileMenu.querySelectorAll(focusableSelectors);
+        if (focusables.length > 0) {
+            focusables[0].focus();
+        }
     }
 
     // Fechar menu mobile
     function closeMobileMenu() {
 
+        if (!mobileMenu || !mobileBtn) return;
+
         mobileMenu.hidden = true;                 // Esconde semanticamente
         mobileMenu.classList.remove('active');
         header.classList.remove('menu-active');
         mobileBtn.setAttribute('aria-expanded', 'false');
+        mobileBtn.setAttribute('aria-label', 'Abrir menu');
+
+        // Libera scroll da página
+        document.body.style.overflow = '';
 
         // Volta ícone para hamburguer
         const icon = mobileBtn.querySelector('i');
@@ -94,10 +115,16 @@ document.addEventListener('DOMContentLoaded', function () {
             icon.classList.add('fa-bars');
             icon.classList.remove('fa-x');
         }
+
+        // Retorna foco ao botão
+        mobileBtn.focus();
     }
 
     // Alternar estado do menu
     function toggleMobileMenu() {
+
+        if (!mobileBtn) return;
+
         const isExpanded = mobileBtn.getAttribute('aria-expanded') === 'true';
 
         if (isExpanded) {
@@ -159,8 +186,32 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape') {
+
+            if (mobileBtn && mobileBtn.getAttribute('aria-expanded') === 'true') {
+                closeMobileMenu();
+            }
+        }
+    });
+
+
+    /* =====================================================
+       FECHAR MENU AO CLICAR FORA
+    ===================================================== */
+
+    document.addEventListener('click', function (e) {
+
+        const isClickInsideMenu = mobileMenu.contains(e.target);
+        const isClickOnButton = mobileBtn.contains(e.target);
+
+        if (
+            mobileBtn &&
+            mobileBtn.getAttribute('aria-expanded') === 'true' &&
+            !isClickInsideMenu &&
+            !isClickOnButton
+        ) {
             closeMobileMenu();
         }
     });
+
 
 });
