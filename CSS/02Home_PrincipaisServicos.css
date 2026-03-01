@@ -1,84 +1,85 @@
-
-#containerBV02{
+#containerBV02 {
     width: 80vw;
-    height: 100vh;
+    min-height: 100vh; /* alterado de height para min-height */
     margin: 0 auto;
-    /* background-color: var(--color07); */
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
     gap: 5px;
 }
 
-#imgBV02{
+#imgBV02 {
     grid-column: 2 / span 2;
     grid-row: 2 / span 1;
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
     gap: 2px;
-    /* margin-top: 2rem; */
-} 
+}
 
-
-
-#simbolo01{
+#simbolo01 {
     width: 100px;
     margin-right: 1rem;
 }
 
-#imgBV02 h2.ttSubtitulos,
-#imgBV02 h1.ttTitulos{
+/* Cores dos títulos */
+#imgBV02 .ttSubtitulos,
+#imgBV02 .ttTitulos {
     color: var(--color05);
-    /* font-weight: var(--peso-subtitulo); */
 }
 
+/* ===============================
+   Lista de Serviços
+================================= */
 
-/*6 principais serviços*/
-
-#seisServicos{
+#seisServicos {
     grid-column: 2 / span 10;
     grid-row: 2 / span 6;
-    /* background-color: var(--color01); */
-    margin-top: 4rem;
+
+    list-style: none;      /* remove marcador padrão */
+    padding: 0;            /* remove padding padrão da ul */
+    margin: 4rem 0 0 0;    /* substitui margin-top anterior */
+
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 50px;
-
 }
 
-.servicoIndividual{
-    /* background-color: var(--color02); */
+.servicoIndividual {
     width: 100%;
     height: auto;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.marcador{
+.marcador {
     width: 80px;
 }
 
-#seisServicos h3.ttSubtitulos{
+/* Título do serviço */
+#seisServicos h3.ttSubtitulos {
     color: var(--color01);
     text-align: center;
     font-weight: var(--peso-negrito);
 }
 
-#seisServicos p.ttPadrao{
+/* Texto do serviço */
+#seisServicos p.ttPadrao {
     color: var(--color01);
     text-align: center;
 }
 
+/* ===============================
+   RESPONSIVO
+================================= */
 
+@media screen and (max-width: 768px) {
 
-/*RESPONSIVO*/
-
-@media screen and (max-width: 768px){
-    #containerBV02{
+    #containerBV02 {
         width: 90vw;
         height: auto;
         min-height: 100vh;
@@ -86,28 +87,28 @@
         grid-template-rows: auto;
     }
 
-    #imgBV02{
+    #imgBV02 {
         grid-column: 1 / span 6;
         grid-row: 2 / span 3;
         justify-content: center;
         margin-top: 5rem;
-        
-    } 
-
-    #seisServicos{
-    grid-column: 1 / span 6;
-    grid-row: 6 / span auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 50px;                
-    margin-top: 21rem;
-    margin-bottom: 8rem;
     }
 
-    .servicoIndividual{
+    #seisServicos {
+        grid-column: 1 / span 6;
+        grid-row: 6 / span auto;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+
+        gap: 50px;
+        margin-top: 21rem;
+        margin-bottom: 8rem;
+    }
+
+    .servicoIndividual {
         width: 48%;
-        /* margin-bottom: 3rem; */
     }
 }

@@ -1,7 +1,6 @@
-
 #containerBV04 {
     width: 80vw;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -17,8 +16,10 @@
     align-items: center;
 }
 
-#imgLogo04{
-    width: 550px;
+#imgLogo04 {
+    width: 500px;
+    max-width: 100%;
+    height: auto;
 }
 
 #containerBV04 .caixaTXT {
@@ -26,6 +27,7 @@
     color: var(--color01);
 }
 
+/* Botão agora como link */
 #btnPPEscolher {
     background-color: var(--color03);
     color: var(--color08);
@@ -36,76 +38,65 @@
     cursor: pointer;
     text-align: center;
     text-decoration: none;
-    display: block;
+    display: inline-block;
     margin-left: auto;
-    margin-top: 1.5rem;;
+    margin-top: 1.5rem;
     font-size: 16px;
     border-radius: 25px;
-    transition: transform .2s ease, color .2s ease;
+    transition: transform .2s ease, background-color .2s ease;
 }
 
-#btnPPEscolher:hover{
-    transform: scale(1.2);
+#btnPPEscolher:hover {
+    transform: scale(1.05);
     background-color: var(--color04);
 }
 
-.caixaTXT h1.ttTitulos,
-.caixaTXT h2.ttSubtitulos{
+#btnPPEscolher:focus-visible {
+    outline: 3px solid var(--color01);
+    outline-offset: 4px;
+}
+
+.caixaTXT .ttTitulos,
+.caixaTXT .ttSubtitulos {
     color: var(--color04);
 }
 
-/* Estilos responsivos para telas menores */
-@media screen and (max-width: 768px){
-    #containerBV04{
+/* ================= RESPONSIVO ================= */
+
+@media screen and (max-width: 768px) {
+
+    #containerBV04 {
         width: 90vw;
-        height: 900px;
+        min-height: auto;
         grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: auto;
-        padding-bottom: 1000px; /* Ajuste para evitar corte do conteúdo */
     }
 
-    #imgBV04{
-        grid-column: 2 / span 5;
+    #imgBV04 {
+        grid-column: 2 / span 4;
         grid-row: 1 / span 3;
-        padding: 50px 0; /* Ajuste para dar mais espaço ao redor da imagem */
-        
+        padding: 50px 0;
     }
 
-    #imgLogo04{
+    #imgLogo04 {
         width: 300px;
     }
 
-    #containerBV04 .caixaTXT{
+    #containerBV04 .caixaTXT {
         grid-row: 4 / span 5;
         align-items: center;
         text-align: center;
     }
 }
 
-/*Tablet*/
-@media screen and (min-width: 769px) and (max-width: 1180px){
-    #containerBV04{
+/* Tablet */
+@media screen and (min-width: 769px) and (max-width: 1180px) {
+
+    #containerBV04 {
         width: 90vw;
-        height: 100vh;
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: auto;
+        min-height: 100vh;
     }
 
-    #imgBV04{
-        grid-column: 1 / span 7;
-        grid-row: 1 / span 10;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #imgLogo04{
+    #imgLogo04 {
         width: 400px;
     }
-
-    #containerBV04 .caixaTXT {
-        grid-row: 2 / span 8;
-        color: var(--color01);
-    }
 }
-
